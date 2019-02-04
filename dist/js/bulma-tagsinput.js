@@ -455,6 +455,9 @@ var bulmaTagsinput = function (_EventEmitter) {
 		key: 'reset',
 		value: function reset() {
 			this.tags = [];
+			while (this.container.childElementCount !== 1) {
+				this.container.removeChild(this.container.firstChild);
+			}
 		}
 	}, {
 		key: 'destroy',

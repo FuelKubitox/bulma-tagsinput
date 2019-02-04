@@ -346,6 +346,9 @@ class bulmaTagsinput extends EventEmitter {
 
 	reset() {
 		this.tags = [];
+		while (this.container.childElementCount !== 1) {
+			this.container.removeChild(this.container.firstChild);
+		}
 	}
 
 	destroy() {
